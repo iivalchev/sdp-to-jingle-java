@@ -9,12 +9,19 @@ repositories {
 group = 'com.github.tuenti'
 version = '1.0'
 
+repositories {
+    maven {
+        url "https://raw.github.com/unisontech/smack-maven-repo/repo/"
+    }
+}
+
 dependencies {
-    compile group: 'jivesoftware', name: 'smack', version: '3.1.0'
-    compile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'com.unison.xmpp', name: 'smack', version: '3.1-SNAPSHOT'
     compile group: 'ch.imvs', name: 'sdes4j', version: '1.1.1'
     compile group: 'net.sourceforge.jsdp', name: 'jsdp', version: '1.1'
-    compile group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-core', version: '1.3'
 }
 
 
@@ -23,23 +30,6 @@ signing {
     required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
     sign configurations.archives
 }
-
-//
-//def centralRepostitoryForDeployment() {
-//    repository(url: sonatypeRepo) {
-//        authentication(userName: sonatypeUsername,
-//                password: sonatypePassword)
-//    }
-//}
-//
-//def localMavenCacheRepo() {
-//    repository(url: "file://" + System.getenv("HOME") + "/.m2/repository")
-//}
-//
-//
-//def inProjectRepo() {
-//    repository(url: "file://" + new File(".").absolutePath + "/repo")
-//}
 
 uploadArchives {
     configuration = configurations.archives

@@ -1,11 +1,67 @@
-# IntelliJ
-.idea/
+target
+zoo.hub.build
+.project
+.cproject
+.classpath
+.settings
+.checkstyle
+.pmd*
+.metadata
+.idea
 *.iml
+*.ipr
+*.iws
+*.ids
+*.a
+*.d
+*.o
+*.pyc
+*.gc*
+*.lo
+*~
+tmp
+dependency-reduced-pom.xml
+check-gcov
+tests.log
+*.vglog
+nb-configuration.xml
+conf/local.properties
+zoo.build.output
+cmake.build.area
+zoo.hub.thirdparty/zeromq-3.2.3/
+zoo.hub.thirdparty/rabbitmq-c-rabbitmq-c-v0.3.0/
+zoo.hub.thirdparty/rabbitmq-c-0.5.0/
+HATSLog.log
+.DS_Store
 
-# Gradle
-.gradle/
-out/
-build/
+# Video & Media #
+*.webm
+*.mkv
+*.flv
+*.ogv
+*.ogg
+*.drc
+*.mov
+*.avi
+*.wmv
+*.yuv
+*.rm
+*.rmvb
+*.asf
+*.mp4
+*.m4p
+*.m4v
+*.mpg
+*.mp2
+*.mpeg
+*.mpe
+*.mpv
+*.m2v
+*.m4v
+*.svi
+*.3gp
+*.3g2
+*.mxf
+*.roq
+*.nsv
 
-# Libraries
-libs/
